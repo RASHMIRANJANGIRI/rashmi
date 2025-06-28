@@ -1,0 +1,119 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  background: #f2f6fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  flex-direction: column;
+}
+
+/* === Container === */
+.container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* === Heading === */
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  animation: slideDown 1s ease-out;
+}
+
+/* === Intro Text === */
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+  animation: fadeIn 1.5s ease;
+}
+
+/* === Contact Card === */
+.contact-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: slideUp 1.5s ease-out;
+}
+
+.contact-card p {
+  font-size: 1.05rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.contact-card a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  animation: fadeIn 2s ease-in;
+}
+
+/* === Animations === */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card p {
+    font-size: 1rem;
+  }
+}
