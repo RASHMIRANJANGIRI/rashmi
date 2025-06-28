@@ -1,0 +1,144 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: #111;
+  /* Fallback background */
+  text-shadow: 1px 1px 2px #000;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+  z-index: 1;
+
+
+}
+
+/* === Center Content Styling === */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 109px;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #000;
+  z-index: 1;
+  position: relative;
+}
+
+/* === Headings === */
+.center-content h1,
+h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* === Links as Buttons === */
+a {
+  display: block;
+  width: 625px;
+  padding: 43px;
+  margin: 16px auto;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background-color: rgba(0, 30, 255, 0.797);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  animation: fadeInUp 2s ease forwards;
+}
+
+a:hover {
+  background-color: #060164;
+  transform: scale(1.05);
+}
+
+/* === Footer Text === */
+p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #eeeeee;
+  animation: fadeIn 2s ease;
+}
+
+/* === Animations === */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+
+  .center-content h1,
+  h1 {
+    font-size: 2rem;
+  }
+
+  a {
+    width: 90%;
+    padding: 25px;
+    font-size: 1rem;
+  }
+}
+
+/* === Background Video Styling === */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 100;
+  /* Optional: Adjust for darkness/lightness */
+  pointer-events: none;
+  /* So it doesn't block clicks */
+}
