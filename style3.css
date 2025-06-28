@@ -1,0 +1,87 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, #e0f7fa, #b3e5fc, #e1f5fe, #b2ebf2);
+    background-size: 400% 400%;
+    animation: smoothBackground 20s ease infinite;
+
+    height: 100vh;
+    color: #003d66;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== Header Styling ===== */
+header p {
+    font-size: 24px;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid #b3e5fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 50, 0.2);
+    animation: fadeInUp 1.5s ease forwards;
+    opacity: 0;
+}
+
+/* ===== Footer Styling ===== */
+footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #004d66;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ===== Background Animation ===== */
+@keyframes smoothBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== Fade In Animations ===== */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== Responsive Text for Small Screens ===== */
+@media (max-width: 600px) {
+    header p {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+}
